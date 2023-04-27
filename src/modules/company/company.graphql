@@ -1,0 +1,36 @@
+type Company {
+  id: String
+  name: String
+  budget: Int
+  description: String
+}
+
+input CreateCompanyInput {
+  name: String
+  budget: Int
+  description: String
+}
+
+type companyProduct {
+  seller: String
+}
+
+input UpdateCompanyInput {
+  id: Int!
+}
+
+type Query {
+  # company: [Company]!
+  company(id: Int!): companyProduct
+  testing: String
+}
+
+type Mutation {
+  createCompany(createCompanyInput: CreateCompanyInput!): Company!
+  updateCompany(updateCompanyInput: UpdateCompanyInput!): Company!
+  removeCompany(id: Int!): Company
+}
+
+type testing {
+  asd: String
+}
