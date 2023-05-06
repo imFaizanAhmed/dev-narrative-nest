@@ -14,8 +14,8 @@ export class CompanyResolver {
   }
 
   @Query('company')
-  find(@Args('id', { nullable: true }) id?: string) {
-    // console.log('first', id);
+  find(@Args('id', { nullable: true }) id?: number) {
+    console.log('first');
     if (id) {
       return this.companyService.findOne(id);
     } else {

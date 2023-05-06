@@ -21,7 +21,7 @@ input UpdateCompanyInput {
 
 type Query {
   # company: [Company]!
-  company(id: String!): Company
+  company(id: Int!): companyProduct
   testing: String
 }
 
