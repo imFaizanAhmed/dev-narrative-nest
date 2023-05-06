@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { CompanyService } from './company.service';
 import { CreateCompanyInput } from './dto/create-company.input';
@@ -14,8 +15,8 @@ export class CompanyResolver {
   }
 
   @Query('company')
-  find(@Args('id', { nullable: true }) id?: number) {
-    console.log('first');
+  find(@Args('id', { nullable: true }) id?: string) {
+    // console.log('first');
     if (id) {
       return this.companyService.findOne(id);
     } else {

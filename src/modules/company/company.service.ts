@@ -20,11 +20,8 @@ export class CompanyService {
     return `This action returns all company`;
   }
 
-  findOne(id: number) {
-    return {
-      seller: 'asd',
-      ss: 'as',
-    };
+  findOne(id: string) {
+    return this.companyModel.findById(id);
   }
 
   update(id: number, updateCompanyInput: UpdateCompanyInput) {
