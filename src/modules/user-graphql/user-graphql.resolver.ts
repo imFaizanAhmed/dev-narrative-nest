@@ -2,8 +2,11 @@ import { Resolver, Query, Mutation, Args } from '@nestjs/graphql';
 import { UserGraphqlService } from './user-graphql.service';
 import { CreateUserGraphqlInput } from './dto/create-user-graphql.input';
 import { UpdateUserGraphqlInput } from './dto/update-user-graphql.input';
+import { Roles } from 'src/decorators/roles.decorator';
+import { Role } from 'src/enums/role.enum';
 
 @Resolver('UserGraphql')
+// @Roles(Role.Admin)
 export class UserGraphqlResolver {
   constructor(private readonly userGraphqlService: UserGraphqlService) {}
 

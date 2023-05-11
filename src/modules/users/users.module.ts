@@ -2,7 +2,7 @@ import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { UsersService } from './users.service';
 import { UsersController } from './users.controller';
-import { LoggerMiddleware } from '../../middleware/logger.middleware';
+import { LoggerMiddleware } from '../../middlewares/logger.middleware';
 import { User, UserSchema } from '../../schemas/users.schema';
 
 @Module({
